@@ -1,13 +1,16 @@
-for i in range(1,101):
-    d = 1
-    print(d)
+# Сделайте предыдущую задачу, добавив проверку на корректность ответа пользователя.
+# Если он ответил “yes” - завершите программу. Если он ответил “no” - продолжайте вывод чисел.
+# Если что-то другое - напечатайте "Don't understand you" и продолжайте спрашивать,
+# пока ответ не будет корректным.
+
+for i in range(0,101):
+    print(i)
     should_break = input('Should we break?').lower()
     while should_break == 'no':
-        d+=i
-        print(d)
+        i += 1
+        print(i)
         should_break = input('Should we break? ').lower()
         while should_break != 'yes' and should_break != 'no':
-            print("Don't understand you")
-            should_break = input('Should we break? ').lower()
+            should_break = input("Don't understand you ").lower()
     else:
          break

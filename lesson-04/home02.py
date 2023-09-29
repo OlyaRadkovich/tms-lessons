@@ -1,10 +1,9 @@
-for i in range(1,101):
-    d = 1
-    print(d)
-    should_break = input("Should we break? Enter 'yes' or 'no' ")
-    while should_break == 'no':
-        d+=i
-        print(d)
-        should_break = input('Should we break? ')
-    else:
-         break
+# Программа выводит на экран числа от 0 до 100.
+# После вывода каждого числа спрашивайте у пользователя “Should we break?”.
+# Если он ответил “yes” - завершите программу. Иначе - продолжайте вывод чисел.
+
+for i in range(0,101):
+    print(i)
+    should_break = input('Should we break? ').lower()
+    if should_break == 'yes':
+        break
